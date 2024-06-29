@@ -40,7 +40,7 @@ document.addEventListener("keypress", () => {
 
 btns.forEach((btn) => {
   btn.addEventListener("mousedown", (e) => {
-    if (gettingPattern) return;
+    if (gettingPattern || !started) return;
     document.body.style.backgroundColor = "#004d00";
     e.target.classList.add("pressed");
 
